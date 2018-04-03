@@ -13,7 +13,7 @@
             <th>Цена</th>
         </tr>
         {% for product in products %}
-        <tr onclick="window.location='/products/detail/{{ product.id }}'">
+        <tr onclick="window.location='{{ path('productDetail',{'id':product.id})}}'">
             <td>{{ product.id }}</td>
             <td>{{ product.name }}</td>
             <td>{{ product.description }}</td>
