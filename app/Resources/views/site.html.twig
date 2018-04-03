@@ -1,0 +1,44 @@
+{% extends "base.html.twig" %}
+{% block stylesheets %}
+<style>
+body{
+    margin: 0;
+}
+.content{
+    width: 1140px;
+    margin: 0 auto;
+    min-height: 640px;
+}
+.main-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #2f6188;
+    text-align: center;
+}
+.main-menu ul li{
+    display: inline-block;
+}
+.main-menu ul li a{
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.main-menu ul li a:hover{
+    background: #285488;
+}
+</style>
+{% endblock %}
+{% block body %}
+    <div class="content">
+        <div class="main-menu">
+            <ul>
+                <li><a href="{{ path('home') }}">Главная</a></li>
+                <li><a href="{{ path('pageAbout') }}">Онас</a></li>
+                <li><a href="{{ path('pageContacts') }}">Контакты</a></li>
+            </ul>
+        </div>
+        {% block content %}{% endblock %}
+    </div>
+{% endblock %}
