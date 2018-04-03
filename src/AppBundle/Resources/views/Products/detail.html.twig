@@ -1,7 +1,21 @@
 {% extends "site.html.twig" %}
 
-{% block title %}AppBundle:Products:detail{% endblock %}
+{% block title %}Страница продукта {{ product.name }}{% endblock %}
 
 {% block content %}
-    <h1>Welcome to the Products:detail page</h1>
+    <h1>Страница продукта <b style="color:green;">{{ product.name }}</b></h1>
+    <table border="1" width="100%" style="border: lemonchiffon;">
+        <tr>
+            <th>#id</th>
+            <th>Название продукта</th>
+            <th>Описание</th>
+            <th>Цена</th>
+        </tr>
+        <tr>
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price }}</td>
+        </tr>
+    </table>
 {% endblock %}

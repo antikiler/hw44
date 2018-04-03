@@ -1,7 +1,12 @@
 {% extends "site.html.twig" %}
 
-{% block title %}AppBundle:Products:new{% endblock %}
+{% block title %}Добавление нового продукта в базу данных{% endblock %}
 
 {% block content %}
-<h1>Welcome to the Products:new page</h1>
+    <h1>Добавление нового продукта в базу данных</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
 {% endblock %}

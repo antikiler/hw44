@@ -15,9 +15,7 @@ class PagesController extends Controller
      */
     public function aboutAction()
     {
-        return $this->render('@App/Pages/about.html.twig', [
-
-        ]);
+        return $this->render('@App/Pages/about.html.twig');
     }
 
     /**
@@ -25,9 +23,7 @@ class PagesController extends Controller
      */
     public function contactsAction()
     {
-        return $this->render('@App/Pages/contacts.html.twig', [
-
-        ]);
+        return $this->render('@App/Pages/contacts.html.twig');
     }
 
 }
